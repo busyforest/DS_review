@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/busyforest/Master Entrance/03.2025年数据结构考点讲解/Code/list/test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "make build"
+        }
+    ],
+    "version": "2.0.0"
+}
