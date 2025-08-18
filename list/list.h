@@ -52,4 +52,4 @@ bool LinkListDelete(LinkList L, int i, int* e);
 
 void DelSqlListDupVal(SqlList* L);
 void MergeSqlList(SqlList* L1, SqlList* L2, SqlList* L);
-int* FindDupValInTriplet(int* a, int* b, int* c);
+void FindDupValInTriplet(SqlList* L1, SqlList* L2, SqlList* L3, SqlList* L);

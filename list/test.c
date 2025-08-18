@@ -4,16 +4,19 @@
 
 int main(){
     // 顺序表部分
-    SqlList L, L1, L2;  
-    int a[10] = {1,2,3,4,5,5,5,6,6,8};
-    int b[10] = {2,3,4,5,6,7,8,9,9,10};
+    SqlList L, L1, L2, L3;  
+    int a[10] = {1,2,3,4,5};
+    int b[10] = {-1,1,3,4,5,8};
+    int c[10] = {-2,0,2,4,6};
     InitSqlList(&L);
     InitSqlList(&L1);
     InitSqlList(&L2);
+    InitSqlList(&L3);
     InitSqlListForTest(&L1, a);
     InitSqlListForTest(&L2, b);
+    InitSqlListForTest(&L3, c);
     printSqlList(&L);
-    MergeSqlList(&L1, &L2, &L);
+    FindDupValInTriplet(&L1, &L2, &L3, &L);
     printSqlList(&L);
     // if(SqlListInsert(&L, 7, 234)){
     //     printSqlList(&L);

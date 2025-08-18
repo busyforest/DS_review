@@ -7,6 +7,12 @@
 int a[10] = {1,2,5,6,7,13,4,8,9,20};
 int b[10] = {1,2,3,4,5,5,5,6,6,8};
 
+/* 辅助函数 */
+
+int min(int x, int y){
+    return x < y ? x : y;
+}
+
 // 用a[]数组初始化顺序表来测试
 void InitSqlListForTest(SqlList* L, int* a){
     for(int i = 0;i < InitSize;i++){
@@ -314,4 +320,27 @@ void MergeSqlList(SqlList* L1, SqlList* L2, SqlList* L){
         L->data[k++] = L2->data[j++];
     }
     L->length = L1->length + L2->length;
+}
+
+// 找出三个有序顺序表中的共同元素
+void FindDupValInTriplet(SqlList* L1, SqlList* L2, SqlList* L3, SqlList* L){
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int m = 0;
+    while(i < L1->length && j < L2->length && k < L3->length){
+        if((L1->data[i] == L2->data[j]) && (L1->data[i] == L3->data[k])){
+            L->data[m++] = L1->data[i];
+            L->length++;
+            i++;
+            j++;
+            k++;
+        }else if(L1->data[i] <= min(L2->data[j], L3->data[k])){
+            i++;
+        }else if(L2->data[j] <= min(L1->data[i], L3->data[k])){
+            j++;
+        }else if(L3->data[k] <= min(L1->data[i], L2->data[j])){
+            k++;
+        }
+    }
 }
