@@ -5,7 +5,7 @@
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/Users/busyforest/Master Entrance/03.2025年数据结构考点讲解/Code/list/test",
+            "program": "/Users/busyforest/Master Entrance/03.2025年数据结构考点讲解/Code/queue/test",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
