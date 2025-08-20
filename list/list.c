@@ -276,7 +276,23 @@ bool LinkListDelete(LinkList L, int i, int* e){
     return true;
 }
 
+// 释放链表(带头节点)
+bool FreeLinkList(LinkList L){
+    if(L == NULL){
+        return false;
+    }
+    Lnode* temp;
+    while(L != NULL){
+        temp = L->next;
+        free(L);
+        L = temp;
+    }
+    free(temp);
+    return true;
+}
 
+
+/* 一些课后习题 */
 
 
 // 删除有序顺序表中的所有重复元素

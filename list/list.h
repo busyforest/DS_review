@@ -25,6 +25,7 @@ typedef struct Lnode{
 }Lnode, * LinkList;
 
 // 一些基本操作
+
 void InitSqlListForTest(SqlList* L, int* a);
 void printSqlList(SqlList* L);
 void printSeqList(SeqList* L);
@@ -47,6 +48,7 @@ Lnode* GetLinkListElemWithoutHeader(LinkList L, int i);
 bool LinkListInsert(LinkList L, int i, int e);
 bool LinkListInsertWithoutHeader(LinkList L, int i, int e);
 bool LinkListDelete(LinkList L, int i, int* e);
+bool FreeLinkList(LinkList L);
 
 // 一些课后习题的尝试实现
 
